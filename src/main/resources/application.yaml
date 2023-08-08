@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: core-shop
+
+  # Databases
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/testdb
+    username: csadmin
+    password: 123$
+
+  # JPA
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+
+      ddl-auto: update
+    show-sql: true
+    generate-ddl: true
+    open-in-view: false
+
+

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>회원정보 수정 페이지</title>
+</head>
+<body>
+    <h2>회원정보 수정 페이지</h2>
+    <div>
+        <table border="1"> <!-- 전송 버튼 누르면 put메서드로 /members 요청이 가고, body에 밑의 4가지 데이터가 담긴다. -->
+            <tr>
+                <td>이메일</td>
+                <td><input type="text" name="email" value="${member.email}" ></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="text" name="password"></td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td th:text="${member.address1}"></td> <!--value에 서버에서 가져온 값이 보여지게 하는 방법? -->
+            </tr>
+            <tr>
+                <td>상세주소</td>
+                <td th:text="${member.address2}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
